@@ -1,25 +1,20 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import { connectDB } from "./config/db.js";
 import jobRoutes from "./routes/jobRoutes.js";
-
-dotenv.config();
+import { connectDB } from "./config/db.js"
+dotenv.config()
 const app = express();
-
-app.use(cors());
-app.use(express.json());
-
-app.use('/jobs', jobRoutes);
-
-app.get("/", (req, res) => {
-  res.redirect("/jobs");
-});
-
-const PORT = process.env.PORT || 3000;
-
+const port = process.env.PORT || 3001
+app.use(cors(
+    {
+        origin: 'http://localhost:5173'
+    }
+))
+app.use(express.json())
+app.use("/jobs", jobRoutes)
 connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
-  });
-});
+    app.listen(port, () => {
+        console.log(`http://localhost:${port}/jobs`)
+    })
+})
