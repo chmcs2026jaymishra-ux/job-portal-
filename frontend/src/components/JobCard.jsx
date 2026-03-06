@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { MapPin, DollarSign, Building } from 'lucide-react';
+import { MapPin, IndianRupee, Building } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const JobCard = ({ job }) => {
@@ -35,9 +35,9 @@ const JobCard = ({ job }) => {
 
                     <div className="flex items-center gap-3">
                         <div className="p-1.5 bg-success/10 rounded-md text-success">
-                            <DollarSign size={16} />
+                            <IndianRupee size={16} />
                         </div>
-                        <span className="font-semibold text-success">${job.salary.toLocaleString()}</span>
+                        <span className="font-semibold text-success">₹{job.salary.toLocaleString()}</span>
                     </div>
                 </div>
 

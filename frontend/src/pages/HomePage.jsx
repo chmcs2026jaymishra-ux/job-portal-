@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../lib/axios';
 import JobCard from '../components/JobCard';
-import { Loader2, Search, MapPin, DollarSign } from 'lucide-react';
+import { Loader2, Search, MapPin, IndianRupee } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const containerVariants = {
@@ -124,9 +124,9 @@ const HomePage = () => {
                         </div>
 
                         <div className="form-control w-full">
-                            <label className="label"><span className="label-text font-semibold text-base-content/80">Min Salary ($)</span></label>
+                            <label className="label"><span className="label-text font-semibold text-base-content/80">Min Salary (₹)</span></label>
                             <label className="input input-bordered flex items-center gap-3 bg-base-200/50 focus-within:bg-base-100 transition-colors rounded-xl">
-                                <DollarSign size={18} className="text-success/70" />
+                                <IndianRupee size={18} className="text-success/70" />
                                 <input type="number" name="salary" value={filters.salary} onChange={handleChange} className="grow font-medium" placeholder="e.g. 50000" min="0" />
                             </label>
                         </div>

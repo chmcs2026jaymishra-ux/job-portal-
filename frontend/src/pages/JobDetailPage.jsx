@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router';
-import { Building, MapPin, DollarSign, Briefcase, Calendar, ChevronLeft, Loader2, Mail, GraduationCap } from 'lucide-react';
+import { Building, MapPin, IndianRupee, Briefcase, Calendar, ChevronLeft, Loader2, Mail, GraduationCap } from 'lucide-react';
 import toast from 'react-hot-toast';
 import api from '../lib/axios';
 import { motion } from 'framer-motion';
@@ -175,11 +175,11 @@ const JobDetailPage = () => {
 
                                     <div className="flex items-start gap-4">
                                         <div className="bg-success/20 p-3 rounded-xl text-success shadow-inner">
-                                            <DollarSign size={22} />
+                                            <IndianRupee size={22} />
                                         </div>
                                         <div>
                                             <p className="text-xs text-base-content/50 font-bold uppercase tracking-widest mb-1">Salary</p>
-                                            <p className="font-extrabold text-success">${job.salary?.toLocaleString()}</p>
+                                            <p className="font-extrabold text-success">₹{job.salary?.toLocaleString()}</p>
                                         </div>
                                     </div>
 

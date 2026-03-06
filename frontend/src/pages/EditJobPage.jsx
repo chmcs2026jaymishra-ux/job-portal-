@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router';
-import { Briefcase, Building, MapPin, DollarSign, Type, FileText, Mail, Loader2, Save } from 'lucide-react';
+import { Briefcase, Building, MapPin, IndianRupee, Type, FileText, Mail, Loader2, Save } from 'lucide-react';
 import toast from 'react-hot-toast';
 import api from '../lib/axios';
 import { motion } from 'framer-motion';
@@ -175,10 +175,10 @@ const EditJobPage = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="form-control w-full">
                                     <label className="label">
-                                        <span className="label-text font-bold text-base-content/80 text-base">Salary ($)</span>
+                                        <span className="label-text font-bold text-base-content/80 text-base">Salary (₹)</span>
                                     </label>
                                     <label className="input input-bordered flex items-center gap-3 bg-base-200/50 focus-within:bg-base-100 transition-colors rounded-xl h-14">
-                                        <DollarSign size={20} className="text-success/70" />
+                                        <IndianRupee size={20} className="text-success/70" />
                                         <input
                                             type="number"
                                             name="salary"
